@@ -270,6 +270,10 @@ footer a:hover::before {
     display: none;
   }
 
+  #slide-menu {
+    display: none;
+  }
+
   #navbar {
     justify-content: space-around;
   }

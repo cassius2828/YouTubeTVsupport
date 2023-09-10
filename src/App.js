@@ -63,30 +63,7 @@ function App() {
       </nav>
 
       <div className="card-container">
-        {/* {steps.section ? (
-          steps.map((i) => {
-            return (
-              <>
-                <span className="section mb2">{i.section}</span>
-                <span className="description mb2">
-                  {i.description && i.description}
-                </span>
-                <div className="mb4">
-                  <span className="topic fw6">
-                    {i.details[0] && i.details[0]}
-                  </span>{" "}
-                  {i.details[1] && i.details[1]}{" "}
-                </div>
-              </>
-            );
-          })
-        ) : (
-          <ol className="stepsOnly">
-            {steps?.map((item) => {
-              return <li>{item}</li>;
-            })}
-          </ol>
-        )} */}
+       
         {data.map((item) => {
           return (
             <Card
@@ -118,28 +95,3 @@ function App() {
 
 export default App;
 
-// make id of index for card so I can use nav to get to the main part
-
-/*
-
-
-
- {steps.section ? 
-        steps.map(i => {
-            return <>
-            <span className="section mb2">{i.section}</span>
-             <span className="description mb2">
-        {i.description && i.description}
-          </span>
-          <div className="mb4">
-         
-            <span className="topic fw6">{i.details[0] && i.details[0]}</span> {i.details[1] && i.details[1]} {" "}
-          </div>
-            </>
-        }) : 
-          <ol className="stepsOnly">
-           {steps?.map(item => {
-            return <li>{item}</li>
-           })}
-          </ol>}
-*/
