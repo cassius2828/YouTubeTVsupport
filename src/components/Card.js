@@ -59,7 +59,7 @@ export const Card = ({ title, heroStep, steps }) => {
                   </>
                 );
               })
-            ) : typeof steps[2] === "string" ? (
+            ) : typeof steps[1] === "string" ? (
               <ol className="stepsOnly">
                 {steps?.map((item, index) => {
                   return <li key={index}>{item}</li>;

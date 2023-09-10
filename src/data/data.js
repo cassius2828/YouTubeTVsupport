@@ -3,9 +3,10 @@ const data = [
     title: "Turning on the PS5",
     heroStep: null,
     steps: [
-      "Turn on the PS5 with the PS5 game controller",
-      "Once the PS5 is on, you can switch to the remote",
+      `Turn on the PS5 with the "PS" button on the media remote or with the PS5 game controller`,
+
       "Click the first profile (Andrew Wiggins picture)",
+      `You will now be in the playstation home screen or wherever the system left off at. Return home by pressing the "PS" button on the media remote`,
     ],
   },
   {
@@ -21,18 +22,18 @@ const data = [
     ],
   },
   {
-    title: "navigating the youtube TV app",
+    title: "navigating the YouTube TV app",
     heroStep: "to find the app the normal way",
     steps: [
       "go to the home screen of the playstation",
       "There will be a game tab and a media tab; go to the media tab ",
-      "look for youtube TV in the recents (it is the black background youtube, the white background is regular youtube)",
-      "if youtube TV is not in the recents, go all the way to the right to “app library”, it can be found there as well",
+      "look for YouTube TV in the recents (it is the black background YouTube, the white background is regular YouTube)",
+      "if YouTube TV is not in the recents, go all the way to the right to “app library”, it can be found there as well",
     ],
   },
   //   either going to be steps.map(i => i) for only steps or steps.map(i => i?.section, i?.description, etc)
   {
-    title: "using the youtube TV app",
+    title: "using the YouTube TV app",
     heroStep: null,
     steps: [
       {
