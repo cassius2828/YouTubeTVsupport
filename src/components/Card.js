@@ -1,19 +1,14 @@
 import React, { useState } from "react";
-import data from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faAngleUp, faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
-
-//   title={}
-//         heroStep={}
-//         steps={}
-//         section={}
-//         description={}
-// details={}
+import {
+  faAngleDown,
+  faAngleUp,
+  faArrowCircleUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const Card = ({ title, heroStep, steps }) => {
   const [cardDrop, setCardDrop] = useState(false);
   const toggleCardDrop = () => {
-    // const content = document.getElementById('content');
     setCardDrop(!cardDrop);
   };
   return (
@@ -39,7 +34,6 @@ export const Card = ({ title, heroStep, steps }) => {
                 })}
               </ol>
             ) : true ? (
-              //  <h1>hi</h1>
               steps.map((i) => {
                 return (
                   <>
@@ -51,8 +45,6 @@ export const Card = ({ title, heroStep, steps }) => {
                     <span className="description mb2">
                       {i.description && i.description}
                     </span>
-
-                    {/*  console.log(data[4].steps[0].details[0][0]); */}
                     {i?.details?.map((item) => {
                       return (
                         <>
@@ -75,9 +67,13 @@ export const Card = ({ title, heroStep, steps }) => {
               </ol>
             ) : null}
             <div id="circle-arrow-container">
-                <a href="#top">
-                    <FontAwesomeIcon size="2x" icon={faArrowCircleUp} id="back-to-top" />
-                </a>
+              <a href="#top">
+                <FontAwesomeIcon
+                  size="2x"
+                  icon={faArrowCircleUp}
+                  id="back-to-top"
+                />
+              </a>
             </div>
           </div>
         ) : null}
@@ -85,20 +81,3 @@ export const Card = ({ title, heroStep, steps }) => {
     </>
   );
 };
-
-//   {/* 2 */}
-//   <div className="card mt4">
-//     <div className="title">Sample Title</div>
-//     <div className="content">
-//       <span className="section mb2">Section</span>
-//       <span className="description mb2">
-//         Lorem ipsus officiis obcaecati modi incidunt consequatur?
-//       </span>
-
-//       <div className="mb4">
-
-//         <span className="topic fw6">Topic Sample 1:</span> f dsaf ds afds g
-//         fg reg fsa v gfsafvsavsda gfsd g{" "}
-//       </div>
-//     </div>
-//   </div>

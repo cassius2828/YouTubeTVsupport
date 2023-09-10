@@ -1,10 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./App.css";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import data from "./data";
-import help from "./help";
+import data from "./data/data";
+import help from "./data/help";
 import { Card } from "./components/Card";
-import { useEffect, useState } from "react";
 
 function App() {
   const toggleNav = () => {
@@ -63,7 +62,6 @@ function App() {
       </nav>
 
       <div className="card-container">
-       
         {data.map((item) => {
           return (
             <Card
@@ -94,4 +92,3 @@ function App() {
 }
 
 export default App;
-
