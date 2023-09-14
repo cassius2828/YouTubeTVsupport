@@ -9,7 +9,7 @@ import {
 export const Card = ({ title, heroStep, steps }) => {
   const [cardDrop, setCardDrop] = useState(false);
   const toggleCardDrop = () => {
-    setCardDrop(!cardDrop);
+    setCardDrop( current => !current);
   };
   return (
     <>
