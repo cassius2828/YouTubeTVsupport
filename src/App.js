@@ -4,13 +4,21 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import data from "./data/data";
 import help from "./data/help";
 import { Card } from "./components/Card";
+import { useState } from "react";
 
 function App() {
+  const [accordian, setAccordian] = useState(null);
+  
   const toggleNav = () => {
     const hamburger = document.getElementById("hamburger");
     const slideMenu = document.getElementById("slide-menu");
     hamburger.classList.toggle("active");
     slideMenu.classList.toggle("active");
+  };
+
+  const onAccordianToggle = (itemIndex) => {
+    setAccordian(itemIndex);
+    if (itemIndex === accordian) setAccordian(null);
   };
 
   return (
@@ -62,15 +70,18 @@ function App() {
       </nav>
 
       <div className="card-container">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
             <Card
+              index={index}
               title={item.title}
               heroStep={item?.heroStep}
               steps={item.steps}
               section={item.section}
               description={item.description}
               details={item.details}
+              handleAccordianToggle={() => onAccordianToggle(index)}
+              accordian={accordian}
             />
           );
         })}

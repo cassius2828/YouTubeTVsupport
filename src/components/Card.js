@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngleDown,
@@ -6,11 +6,15 @@ import {
   faArrowCircleUp,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const Card = ({ title, heroStep, steps }) => {
-  const [cardDrop, setCardDrop] = useState(false);
-  const toggleCardDrop = () => {
-    setCardDrop( current => !current);
-  };
+export const Card = ({
+  title,
+  heroStep,
+  steps,
+  handleAccordianToggle,
+  index,
+  accordian,
+}) => {
+
   return (
     <>
       {" "}
@@ -18,12 +22,12 @@ export const Card = ({ title, heroStep, steps }) => {
         <div id={title} className="title">
           {title}
           <FontAwesomeIcon
-            onClick={toggleCardDrop}
+            onClick={handleAccordianToggle}
             className="dropdown"
-            icon={!cardDrop ? faAngleDown : faAngleUp}
+            icon={accordian !== index ? faAngleDown : faAngleUp}
           />
         </div>
-        {cardDrop ? (
+        {accordian === index ? (
           <div className="content">
             <span className="heroStep mb2">{heroStep}</span>
 
